@@ -3,7 +3,6 @@ import 'package:ticket_scanner/common/color_pallate.dart';
 import 'package:ticket_scanner/screens/splash_screen.dart';
 
 void main() {
-  
   runApp(const MyApp());
 }
 
