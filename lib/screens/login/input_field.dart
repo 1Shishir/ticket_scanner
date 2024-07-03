@@ -24,8 +24,8 @@ class InputField extends StatelessWidget {
         textInputAction:
             isPassword ? TextInputAction.done : TextInputAction.next,
         keyboardType: isPassword
-            ? TextInputType.emailAddress
-            : TextInputType.visiblePassword,
+            ? TextInputType.visiblePassword
+            : TextInputType.emailAddress,
         obscureText: isPassword,
         validator: validator,
         style: const TextStyle(
@@ -43,7 +43,6 @@ class InputField extends StatelessWidget {
             fontWeight: FontWeight.w400,
           ),
           errorMaxLines: 1,
-
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5.0),
             borderSide: BorderSide.none,

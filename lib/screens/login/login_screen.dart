@@ -14,21 +14,27 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
+    double screenHeight = MediaQuery.sizeOf(context).height;
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: primaryColor,
       body: SafeArea(
         child: SingleChildScrollView(
-          physics: const NeverScrollableScrollPhysics(),
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 38.0, vertical: 20.0),
           child: Form(
             key: formKey,
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: screenHeight * 0.15),
-                  child: SvgPicture.asset("assets/images/GoEventy_Icon.svg",height: 130,),
+                  padding: EdgeInsets.symmetric(vertical: screenHeight * 0.12),
+                  child: Hero(
+                    tag: "splashscreen",
+                    child: SvgPicture.asset(
+                      "assets/images/GoEventy_Icon.svg",
+                      height: 130,
+                    ),
+                  ),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(bottom: 30.0),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_scanner/common/color_pallate.dart';
 import 'package:ticket_scanner/common/widget/login_button.dart';
+import 'package:ticket_scanner/common/widget/logout_button.dart';
 import 'package:ticket_scanner/screens/qr/qr_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -84,14 +85,15 @@ class HomeScreen extends StatelessWidget {
                       MaterialPageRoute(
                         builder: (context) => const QrScreen(),
                       ),
-                      
                     );
                   },
                   backgroundColor: Colors.black,
                   textColor: Colors.white,
                   text: "Start Scanning",
                 ),
-              )
+              ),
+              const Spacer(),
+              const LogoutButton(),
             ],
           ),
         ),
@@ -99,18 +101,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-//  Center(
-//           child: ElevatedButton(
-//             onPressed: () {
-//               Navigator.of(context).push(
-//                 MaterialPageRoute(
-//                   builder: (context) => const BarcodeScannerWithOverlay(),
-//                 ),
-//               );
-//             },
-//             child: const Text("Scan now"),
-//           ),
